@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8FACA9F-8EEF-4329-B2E3-50095280B118}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MonsterMaze</RootNamespace>
+    <AssemblyName>MonsterMaze</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayExtensions.cs" />
+    <Compile Include="ConsoleController\Controller.cs" />
+    <Compile Include="ConsoleController\Input\KeyReader.cs" />
+    <Compile Include="GameModel\Behaviour\BehaviourModel.cs" />
+    <Compile Include="GameModel\Behaviour\IModelBehaviour.cs" />
+    <Compile Include="GameModel\CollisionInfoExtensions.cs" />
+    <Compile Include="GameModel\Frame.cs" />
+    <Compile Include="GameModel\GameConstants.cs" />
+    <Compile Include="GameModel\IQueueListener.cs" />
+    <Compile Include="GameModel\ControllerMessageMediator.cs" />
+    <Compile Include="GameModel\MessageHandler.cs" />
+    <Compile Include="GameModel\CollisionInfo.cs" />
+    <Compile Include="GameModel\Input\InputMap.cs" />
+    <Compile Include="GameModel\Behaviour\MonsterAi.cs" />
+    <Compile Include="GameModel\Message.cs" />
+    <Compile Include="GameModel\MessageListener.cs" />
+    <Compile Include="GameModel\Tiles\MobilesMap.cs" />
+    <Compile Include="GameModel\Tiles\StaticsMap.cs" />
+    <Compile Include="GameModel\Tiles\Tile.cs" />
+    <Compile Include="GameModel\Tiles\MessageTarget.cs" />
+    <Compile Include="GameModel\Tiles\TileExtensions.cs" />
+    <Compile Include="ControllerMessage.cs" />
+    <Compile Include="ConsoleView\IView.cs" />
+    <Compile Include="GameModel\IModel.cs" />
+    <Compile Include="GameModel\Model.cs" />
+    <Compile Include="ConsoleView\SpriteSheet.cs" />
+    <Compile Include="ConsoleView\View.cs" />
+    <Compile Include="GameModel\Tiles\TileLoader.cs" />
+    <Compile Include="GameModel\Tiles\TileSet.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="PointExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>
